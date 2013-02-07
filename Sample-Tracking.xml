@@ -1,0 +1,24 @@
+<OpenNI>
+	<Licenses>
+		<License vendor="PrimeSense" key="NONE"/>
+	</Licenses>
+	<Log writeToConsole="true" writeToFile="false">
+		<!-- 0 - Verbose, 1 - Info, 2 - Warning, 3 - Error (default) -->
+		<LogLevel value="3"/>
+		<Masks>
+			<Mask name="ALL" on="false"/>
+		</Masks>
+		<Dumps>
+		</Dumps>
+	</Log>
+	<ProductionNodes>
+		<Node type="Depth">
+			<Configuration>
+                <MapOutputMode xRes="640" yRes="480" FPS="30"/> <!-- The Kinect only supports 640x480 resolution at max, so do not change this value! -->
+				<Mirror on="true"/>
+			</Configuration>
+		</Node>
+		<Node type="Gesture" />
+		<Node type="Hands" />
+	</ProductionNodes>
+</OpenNI>

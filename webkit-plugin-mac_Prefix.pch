@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'webkit-plugin-mac' target in the 'webkit-plugin-mac' project.
+//
+
+#ifdef __OBJC__
+#ifdef __cplusplus
+    #include <opencv2/opencv.hpp>
+#endif
+    #import <Cocoa/Cocoa.h>
+#endif
+
