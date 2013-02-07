@@ -11,6 +11,7 @@ Prerequisites:
 
 
 Part 1: Install libusb from MacPorts
+
 In Terminal, run the following commands, in order, after installing MacPorts from the dmg file above:
 
 1. `sudo port install libtool`
@@ -19,7 +20,8 @@ In Terminal, run the following commands, in order, after installing MacPorts fro
 The second command is important -- make sure you have the +universal flag on the end.
 
 Part 2: Install PrimeSense OpenNI
-Open the “OpenNI-Unstable” folder from the kinect repository, and run the following commands:
+
+Open the “OpenNI-Unstable” folder inside the `NITEMiddleware` folder, and run the following commands:
 
 1. `chmod +x install.sh`
 2. `sudo ./install.sh`
