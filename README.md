@@ -1,16 +1,15 @@
 KinectHandTracker
 =================
-
+First, a thank you to the MIT Media Lab for DepthJS, which this project is based on. Now for the install guide...
 
 Prerequisites:
 
 * Xcode 4
 * Mac OSX Lion (10.7)
 * MacPorts (dmg available here: <https://distfiles.macports.org/MacPorts/MacPorts-2.0.3-10.7-Lion.dmg>)
-* All the folders included on the kinect git repository
 
 
-Part 1: Install libusb from MacPorts
+##Part 1: Install libusb from MacPorts
 
 In Terminal, run the following commands, in order, after installing MacPorts from the dmg file above:
 
@@ -19,7 +18,7 @@ In Terminal, run the following commands, in order, after installing MacPorts fro
 
 The second command is important -- make sure you have the +universal flag on the end.
 
-Part 2: Install PrimeSense OpenNI
+##Part 2: Install PrimeSense OpenNI
 
 Open the “OpenNI-Unstable” folder inside the `NITEMiddleware` folder, and run the following commands:
 
@@ -32,13 +31,15 @@ If successful, the install script copies key files to the following location:
 		       Includes into: `/usr/include/ni`
 		       Config files into: `/var/lib/ni`
 
-Part 3: Install SensorKinect
+##Part 3: Install SensorKinect
+
 Open the “SensorServer” folder from the kinect repository, and run the following commands:
 
 1. `chmod +x install.sh`
 2. `sudo ./install.sh`
 
-Part 4: Install PrimeSense NITE Middleware
+##Part 4: Install PrimeSense NITE Middleware
+
 Open the “nite” folder from the kinect repository.
 
 1. Navigate to `nite/Hands_1_4_1/Data/` and open `Nite.ini`
@@ -49,14 +50,14 @@ Open the “nite” folder from the kinect repository.
 
 This script will copy the libs to /usr/lib. The include files will be left in the nite directory.
 
-Part 5: Test OpenNI/NITE/Kinect installation
+##Part 5: Test OpenNI/NITE/Kinect installation
 
 Open the `nite\Samples\Bin\Debug` directory, and run the following command:
 `./Sample-PointViewer`
 
 You should see output from the kinect camera, and when you wave your hand, OpenNI/NITE should start tracking your hand. If this does not happen, you should go back and check your installation before continuing.
 
-Part 6: Set up Xcode project
+##Part 6: Set up Xcode project
 
 1. Open Xcode 4, and click open an existing project. Browse to the `webkit-plugin-mac` folder from the kinect repository, and select the directory ending in .xcodeproj to be the existing project to open.
 
@@ -66,7 +67,8 @@ Part 6: Set up Xcode project
 
 4. Build the Xcode project. It should come up with a large number of warnings, but no errors, and you should receive a “BUILD SUCCESSFUL” message if everything went OK.
 
-Part 7: Run the demo application
+##Part 7: Run the demo application
+
 1. Navigate to `webkit-plugin-mac/build/Debug/webkit-plugin-mac.webplugin/Contents/MacOS` if your Xcode is set up to build to the working directory, or wherever you normally build your Xcode projects otherwise.
 
 2. Run `./webkit-plugin-mac`, and step a little bit back from the Kinect camera -- the depth sensor is not good when you are too close to the camera.
