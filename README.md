@@ -1,24 +1,29 @@
 KinectHandTracker
 =================
 
+
 Prerequisites:
--Xcode 4
--Mac OSX Lion (10.7)
--MacPorts (dmg available here: <https://distfiles.macports.org/MacPorts/MacPorts-2.0.3-10.7-Lion.dmg>)
--All the folders included on the kinect git repository
+
+* Xcode 4
+* Mac OSX Lion (10.7)
+* MacPorts (dmg available here: <https://distfiles.macports.org/MacPorts/MacPorts-2.0.3-10.7-Lion.dmg>)
+* All the folders included on the kinect git repository
 
 
 Part 1: Install libusb from MacPorts
 In Terminal, run the following commands, in order, after installing MacPorts from the dmg file above:
+
 1. `sudo port install libtool`
-2. `sudo port install libusb-devel +universal`
+1. `sudo port install libusb-devel +universal`
 
 The second command is important -- make sure you have the +universal flag on the end.
 
 Part 2: Install PrimeSense OpenNI
 Open the “OpenNI-Unstable” folder from the kinect repository, and run the following commands:
+
 1. `chmod +x install.sh`
 2. `sudo ./install.sh`
+
 If successful, the install script copies key files to the following location:
   	       Libs into: `/usr/lib`
 		       Bins into: `/usr/bin`
@@ -27,16 +32,19 @@ If successful, the install script copies key files to the following location:
 
 Part 3: Install SensorKinect
 Open the “SensorServer” folder from the kinect repository, and run the following commands:
+
 1. `chmod +x install.sh`
 2. `sudo ./install.sh`
 
 Part 4: Install PrimeSense NITE Middleware
 Open the “nite” folder from the kinect repository.
+
 1. Navigate to `nite/Hands_1_4_1/Data/` and open `Nite.ini`
 2. Make sure the lines about detecting hands are uncommented, and save the file.
 3. Go back to the nite root folder and:
 4. `chmod +x install.sh`
 5. `sudo ./install.sh`
+
 This script will copy the libs to /usr/lib. The include files will be left in the nite directory.
 
 Part 5: Test OpenNI/NITE/Kinect installation
@@ -47,6 +55,7 @@ Open the `nite\Samples\Bin\Debug` directory, and run the following command:
 You should see output from the kinect camera, and when you wave your hand, OpenNI/NITE should start tracking your hand. If this does not happen, you should go back and check your installation before continuing.
 
 Part 6: Set up Xcode project
+
 1. Open Xcode 4, and click open an existing project. Browse to the `webkit-plugin-mac` folder from the kinect repository, and select the directory ending in .xcodeproj to be the existing project to open.
 
 2. Do not build the project yet! Click on the `webkit-plugin-mac` header and navigate to Build Settings. 
