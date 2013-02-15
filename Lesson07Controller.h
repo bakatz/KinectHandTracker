@@ -7,6 +7,7 @@
  * Visit my site at nehe.gamedev.net"
  * 
  * Cocoa port by Bryan Blackburn 2002; www.withay.com
+ * Updated to support OpenNI/Kinect input by Ben Katz (bakatz@vt.edu); www.bakatz.com
  */
 
 /* Lesson07Controller.h */
